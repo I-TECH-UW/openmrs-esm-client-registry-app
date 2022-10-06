@@ -1,22 +1,21 @@
-import React, { useCallback, useReducer, useState } from "react";
-import { useTranslation } from "react-i18next";
 import {
+  Button,
   ContentSwitcher,
+  NumberInput,
   Switch,
   TextInput,
-  DatePicker,
-  DatePickerInput,
-  Button,
-  NumberInput,
 } from "@carbon/react";
-import { ChevronUp, ChevronDown } from "@carbon/react/icons";
-import styles from "./refine-search.scss";
-import reducer, { initialState } from "./advanced-search-reducer";
+import { ChevronDown, ChevronUp } from "@carbon/react/icons";
+import { useLayoutType } from "@openmrs/esm-framework";
+import React, { useCallback, useReducer, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   AdvancedPatientSearchActionTypes,
   AdvancedPatientSearchState,
 } from "../types";
-import { useLayoutType } from "@openmrs/esm-framework";
+import reducer, { initialState } from "./advanced-search-reducer";
+import styles from "./refine-search.scss";
 
 interface RefineSearchProps {
   inTabletOrOverlay: boolean;

@@ -1,13 +1,13 @@
+import { R4 } from "@ahryman40k/ts-fhir-types";
+import { Layer, Tile } from "@carbon/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import styles from "./client-registry-lg.scss";
-import { Layer, Tile } from "@carbon/react";
+
 import EmptyDataIllustration from "../ui-components/empty-data-illustration.component";
+import styles from "./client-registry-lg.scss";
 import PatientBanner, {
   PatientBannerSkeleton,
 } from "./patient-banner/banner/patient-banner.component";
-import { SearchedPatient } from "../types";
-import { R4 } from "@ahryman40k/ts-fhir-types";
 
 interface EmptyQueryIllustrationProps {
   inTabletOrOverlay: boolean;

@@ -1,16 +1,11 @@
-import React, { useCallback, useState, useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { HeaderGlobalAction } from "@carbon/react";
-import { Close, Search, LocationPerson } from "@carbon/react/icons";
-import {
-  isDesktop,
-  navigate,
-  useLayoutType,
-  useOnClickOutside,
-} from "@openmrs/esm-framework";
-import ClientRegistryOverlay from "../client-registry-overlay/client-registry-overlay.component";
-import styles from "./client-registry-icon.scss";
+import { Close, LocationPerson } from "@carbon/react/icons";
+import { navigate, useLayoutType } from "@openmrs/esm-framework";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useParams, useSearchParams } from "react-router-dom";
+
+import styles from "./client-registry-icon.scss";
 
 interface ClientRegistryLaunchProps {}
 
@@ -38,7 +33,7 @@ const ClientRegistryLaunch: React.FC<ClientRegistryLaunchProps> = () => {
         )}`,
       });
     }
-  }, [isSearchPage]);
+  }, [isSearchPage, initialSearchTerm]);
 
   return (
     <div className={styles.patientSearchIconWrapper}>

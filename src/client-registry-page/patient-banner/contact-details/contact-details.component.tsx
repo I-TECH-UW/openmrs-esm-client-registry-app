@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { SkeletonText } from "@carbon/react";
 import { useRelationships } from "./relationships.resource";
 import { usePatientContactAttributes } from "../hooks/usePatientAttributes";
-import { Address as AddressType } from "../../../types";
 import styles from "./contact-details.scss";
 import { R4 } from "@ahryman40k/ts-fhir-types";
 

@@ -44,9 +44,10 @@
     "url": "https://github.com/i-tech-uw/openmrs-esm-client-registry-app/issues"
   },
   "dependencies": {
+    "@ahryman40k/ts-fhir-types": "^4.0.39",
     "@carbon/react": "^1.12.0",
-    "swr": "^1.0.1",
-    "lodash-es": "^4.17.15"
+    "lodash-es": "^4.17.15",
+    "swr": "^1.0.1"
   },
   "peerDependencies": {
     "@openmrs/esm-framework": "4.x",
@@ -88,10 +89,10 @@
     "openmrs": "next",
     "prettier": "^2.3.0",
     "pretty-quick": "^3.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.14.0",
-    "react-i18next": "^11.7.0",
-    "react-router-dom": "^5.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-i18next": "^11.0.0",
+    "react-router-dom": "^6.3.0",
     "rxjs": "^6.5.4",
     "swc-loader": "^0.2.3",
     "systemjs-webpack-interop": "^2.3.7",

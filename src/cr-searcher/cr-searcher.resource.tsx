@@ -1,17 +1,7 @@
-import { useCallback, useMemo } from "react";
-import useSWR from "swr";
-import useSWRInfinite from "swr/infinite";
-import useSWRImmutable from "swr/immutable";
-import {
-  openmrsFetch,
-  useConfig,
-  FetchResponse,
-  openmrsObservableFetch,
-  showToast,
-} from "@openmrs/esm-framework";
-import { PatientSearchResponse, SearchedPatient } from "./types";
-import { useTranslation } from "react-i18next";
 import { R4 } from "@ahryman40k/ts-fhir-types";
+import { FetchResponse, openmrsFetch, useConfig } from "@openmrs/esm-framework";
+import { useMemo } from "react";
+import useSWR from "swr";
 
 export function useClientRegistrySearch(
   searchTerm: string,

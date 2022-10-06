@@ -21,7 +21,6 @@ import {
   useConfig,
   ConfigurableLink,
 } from "@openmrs/esm-framework";
-import { SearchedPatient } from "../../../types";
 import ContactDetails from "../contact-details/contact-details.component";
 import CustomOverflowMenuComponent from "../ui-components/overflow-menu.component";
 import styles from "./patient-banner.scss";

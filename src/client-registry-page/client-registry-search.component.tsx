@@ -1,7 +1,8 @@
 import { R4 } from "@ahryman40k/ts-fhir-types";
 import { PatientGenderKind } from "@ahryman40k/ts-fhir-types/lib/R4";
 import React, { useEffect, useMemo, useState } from "react";
-import { useClientRegistrySearch } from "../client-registry-search.resource";
+
+import { useClientRegistrySearch } from "../cr-searcher/cr-searcher.resource";
 import { AdvancedPatientSearchState } from "../types";
 import styles from "./advanced-patient-search.scss";
 import { initialState } from "./advanced-search-reducer";

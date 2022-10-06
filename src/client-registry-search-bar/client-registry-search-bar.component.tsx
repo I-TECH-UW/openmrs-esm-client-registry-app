@@ -1,6 +1,7 @@
+import { Button, Search } from "@carbon/react";
 import React, { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Search } from "@carbon/react";
+
 import styles from "./client-registry-search-bar.scss";
 
 interface ClientRegistrySearchBarProps {

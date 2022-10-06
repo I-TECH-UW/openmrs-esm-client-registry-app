@@ -1,22 +1,23 @@
-import React, { useCallback, useEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import isEmpty from "lodash-es/isEmpty";
+import { R4 } from "@ahryman40k/ts-fhir-types";
 import {
   interpolateString,
   navigate,
   useConfig,
   usePagination,
 } from "@openmrs/esm-framework";
+import isEmpty from "lodash-es/isEmpty";
+import React, { useCallback, useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import Pagination from "../ui-components/pagination/pagination.component";
 import styles from "./client-registry-lg.scss";
 import {
+  ClientRegistryResults,
   EmptyQueryIllustration,
   EmptySearchResultsIllustration,
   FetchErrorIllustration,
   LoadingSearchResults,
-  ClientRegistryResults,
 } from "./client-registry-views";
-import { R4 } from "@ahryman40k/ts-fhir-types";
 
 interface ClientRegistryComponentProps {
   query: string;
@@ -49,7 +50,7 @@ const ClientRegistryComponent: React.FC<ClientRegistryComponentProps> = ({
 
   useEffect(() => {
     goTo(1);
-  }, [query]);
+  }, [query, goTo]);
 
   const handlePatientSelection = useCallback(
     (evt, patientUuid: string) => {
