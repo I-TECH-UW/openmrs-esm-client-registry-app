@@ -1,11 +1,12 @@
 {
   "name": "@openmrs/esm-template-app",
-  "version": "3.0.0",
+  "version": "0.0.0",
   "license": "MPL-2.0",
-  "description": "A microfrontend template OpenMRS",
-  "browser": "dist/openmrs-esm-template-app.js",
+  "description": "Client Registry support for OpenMRS 3.x",
+  "browser": "dist/openmrs-esm-client-registry-app.js",
   "main": "src/index.ts",
   "source": true,
+  "homepage": "https://github.com/i-tech-uw/openmrs-esm-client-registry-app#readme",
   "scripts": {
     "start": "openmrs develop",
     "serve": "webpack serve --mode=development",
@@ -29,33 +30,32 @@
   ],
   "keywords": [
     "openmrs",
-    "microfrontends"
+    "microfrontends",
+    "clientregistry"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openmrs/openmrs-esm-template-app.git"
+    "url": "git+https://github.com/i-tech-uw/openmrs-esm-client-registry-app.git"
   },
-  "homepage": "https://github.com/openmrs/openmrs-esm-template-app#readme",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/openmrs/openmrs-esm-template-app/issues"
+    "url": "https://github.com/i-tech-uw/openmrs-esm-client-registry-app/issues"
   },
   "dependencies": {
-    "@carbon/icons-react": "^10.18.0",
-    "carbon-components-react": "^7.25.0",
+    "@carbon/react": "^1.12.0",
+    "swr": "^1.0.1",
     "lodash-es": "^4.17.15"
   },
   "peerDependencies": {
-    "@openmrs/esm-framework": "^3.14.0-pre",
+    "@openmrs/esm-framework": "4.x",
     "carbon-components": "10.x",
     "carbon-icons": "7.x",
     "dayjs": "1.x",
-    "react": "16.x",
+    "react": "^18.1.0",
     "react-i18next": "11.x",
-    "react-router-dom": "5.x",
-    "rxjs": "6.x"
+    "react-router-dom": "6.x"
   },
   "devDependencies": {
     "@openmrs/esm-framework": "next",

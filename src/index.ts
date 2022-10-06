@@ -41,6 +41,10 @@ const backendDependencies = {
   "webservices.rest": "^2.2.0",
 };
 
+const frontendDependencies = {
+  "@openmrs/esm-framework": process.env.FRAMEWORK_VERSION,
+};
+
 /**
  * This function performs any setup that should happen at microfrontend
  * load-time (such as defining the config schema) and then returns an
@@ -54,10 +58,10 @@ const backendDependencies = {
  * `/openmrs/spa/hello`.
  */
 function setupOpenMRS() {
-  const moduleName = "@openmrs/esm-template-app";
+  const moduleName = "@openmrs/esm-client-registry-app";
 
   const options = {
-    featureName: "hello-world",
+    featureName: "client-registry",
     moduleName,
   };
 
@@ -66,38 +70,28 @@ function setupOpenMRS() {
   return {
     pages: [
       {
-        load: getAsyncLifecycle(() => import("./hello"), options),
-        route: "hello",
+        route: /^cr/,
+        load: getAsyncLifecycle(() => import("./root.component"), options),
       },
     ],
     extensions: [
       {
-        name: "Red box",
+        id: "client-registry-icon",
+        slot: "top-nav-actions-slot",
+        order: 1,
         load: getAsyncLifecycle(
-          () => import("./boxes/extensions/red-box"),
+          () => import("./client-registry-icon"),
           options
         ),
-        slot: "Boxes",
-      },
-      {
-        name: "Blue box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/blue-box"),
-          options
-        ),
-        slot: "Boxes",
-        // same as `slots: ["Boxes"],`
-      },
-      {
-        name: "Brand box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/brand-box"),
-          options
-        ),
-        slot: "Boxes",
       },
     ],
   };
 }
 
-export { backendDependencies, importTranslation, setupOpenMRS, version };
+export {
+  backendDependencies,
+  frontendDependencies,
+  importTranslation,
+  setupOpenMRS,
+  version,
+};
