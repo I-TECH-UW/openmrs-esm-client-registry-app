@@ -8,7 +8,7 @@
   "source": true,
   "homepage": "https://github.com/i-tech-uw/openmrs-esm-client-registry-app#readme",
   "scripts": {
-    "start": "openmrs develop",
+    "start": "openmrs develop --port 8085",
     "serve": "webpack serve --mode=development",
     "build": "webpack --mode production",
     "analyze": "webpack --mode=production --env.analyze=true",
