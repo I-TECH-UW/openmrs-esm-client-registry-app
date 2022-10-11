@@ -30,12 +30,12 @@ services:
     container_name: o3-backend
     hostname: backend
     platform: linux/arm64
-    image: openmrs/openmrs-reference-application-3-backend:nightly
+    image: openmrs/openmrs-reference-application-3-backend:dev3
     depends_on:
       - o3-db
     environment:
       OMRS_CONFIG_MODULE_WEB_ADMIN: "true"
-      OMRS_CONFIG_AUTO_UPDATE_DATABASE: "true"
+      OMRS_CONFIG_AUTO_UPDATE_DATABASE: "false"
       OMRS_CONFIG_CREATE_TABLES: "true"
       OMRS_CONFIG_CONNECTION_SERVER: o3-db
       OMRS_CONFIG_CONNECTION_DATABASE: openmrs
